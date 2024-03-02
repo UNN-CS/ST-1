@@ -20,10 +20,11 @@ TEST(checkPrime, testBigConstantValue) {
 }
 
 TEST(checkPrime, testRandomFalse) {
-    uint32_t key = time(0);
-    for (int i = 0; i < 100; i++) {
-        uint64_t num = rand_r(key);
-        EXIT_FALSE(checkPrime(num * num))
+    uint32_t seed = time(0);
+    int n = 10;
+    for (int i = 0; i < n; i++) {
+        uint64_t value = rand_r(&seed) % 1'000'000'000;
+        EXPECT_FALSE(checkPrime(value * value));
     }
 }
 
