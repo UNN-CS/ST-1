@@ -5,7 +5,7 @@
 #include <ctime>
 #include "alg.h"
 
-TEST(checkPrime,testConstatValue) {
+TEST(checkPrime, testConstatValue) {
     EXPECT_TRUE(checkPrime(5));
     EXPECT_TRUE(checkPrime(11));
     EXPECT_FALSE(checkPrime(128));
@@ -20,7 +20,7 @@ TEST(checkPrime, testBigConstantValue) {
 }
 
 TEST(checkPrime, testRandomFalse) {
-    uint64_t key = time(0);
+    uint32_t key = time(0);
     for (int i = 0; i < 100; i++) {
         uint64_t num = rand_r(key);
         EXIT_FALSE(checkPrime(num * num))
@@ -44,7 +44,7 @@ TEST(nPrime, testBigConstValueN) {
     EXPECT_EQ(1299721, nPrime(100000));
 }
 
-TEST(nextPrime,testConstValueNext) {
+TEST(nextPrime, testConstValueNext) {
     EXPECT_EQ(2, nextPrime(0));
     EXPECT_EQ(2, nextPrime(1));
     EXPECT_EQ(11, nextPrime(7));
