@@ -42,7 +42,7 @@ TEST(nPrime, testConstValueN) {
 
 TEST(nPrime, testBigConstValueN) {
     EXPECT_EQ(1299709, nPrime(100000));
-    EXPECT_EQ(1299721, nPrime(100000));
+    EXPECT_EQ(1299721, nPrime(100001));
 }
 
 TEST(nextPrime, testConstValueNext) {
