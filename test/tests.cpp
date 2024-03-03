@@ -21,7 +21,6 @@ TEST(NPrime, smallPositiveValues) {
     EXPECT_EQ(nPrime(3), 5);
 }
 
-
 TEST(NPrime, bigValues) {
     EXPECT_EQ(nPrime(283000), 3997859);
 }
@@ -44,7 +43,7 @@ TEST(NextPrime, anyValues) {
 
 TEST(NextPrime, extremeValue) {
     EXPECT_EQ(nextPrime(18446744073709551550ULL), 18446744073709551557ULL);
-    EXPECT_NE(nextPrime(UINT64_MAX), 2);
+    EXPECT_ANY_THROW(nextPrime(UINT64_MAX));
 }
 
 TEST(SumPrime, smallValues) {
@@ -63,7 +62,7 @@ TEST(SumPrime, sumOfPrimesLessThanTwoMillion) {
     EXPECT_EQ(sumPrime(2e6), 142913828922);
 }
 
-TEST(CheckPrime, extremeValues) {
+TEST(CheckPrimeBroken, extremeValues) {
     EXPECT_FALSE(checkPrime(UINT64_MAX));
     EXPECT_TRUE(checkPrime(18446744073709551557ULL));
 }
