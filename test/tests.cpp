@@ -1,4 +1,4 @@
-Copyright 2024 Kiselev_I
+//Copyright 2024 Kiselev_I
 #include <gtest/gtest.h>
 #include <cstdint>
 #include "alg.h"
