@@ -154,15 +154,3 @@ TEST(TestSumPrime, checkTwoMillions) {
     EXPECT_EQ(sumPrime(2000000), 142913828922);
     EXPECT_TRUE(true);
 }
-
-//------------------------main
-
-int main() {
-    int result_code = 0;
-    ::testing::TestEventListeners& listeners =
-        ::testing::UnitTest::GetInstance()->listeners();
-    result_code = RUN_ALL_TESTS();
-    ::testing::internal::TimeInMillis elapsed(
-        ::testing::UnitTest::GetInstance()->elapsed_time());
-    return result_code;
-}
