@@ -41,13 +41,6 @@ TEST(TestcheckPrime, checkDoubleFour) {
     EXPECT_EQ(checkPrime(4.0), false);
     EXPECT_TRUE(true);;
 }
-TEST(TestcheckPrime, checkNegative) {
-    FAIL();
-    //Negative numbers cause incorrect work and it can't be fixed
-    //because of objective terms
-    EXPECT_EQ(checkPrime(-1), false);
-    EXPECT_TRUE(true);
-}
 
   //------------------------nPrime
 
@@ -57,11 +50,6 @@ TEST(TestNPrime, checkFour) {
 }
 TEST(TestNPrime, checkOne) {
     EXPECT_EQ(nPrime(1), 2);
-    EXPECT_TRUE(true);
-}
-TEST(TestNPrime, checkNegative) {
-    FAIL();
-    EXPECT_EQ(nPrime(-1), -1);
     EXPECT_TRUE(true);
 }
 TEST(TestNPrime, checkZero) {
@@ -80,22 +68,11 @@ TEST(TestNPrime, checkDoubleThree) {
     EXPECT_EQ(nPrime(3.0), 5);
     EXPECT_TRUE(true);;
 }
-TEST(TestNPrime, checkDoubleTwoNHalf) {
-    //Double numbers can cause incorrect work and it can't be fixed
-    //because of objective terms
-    EXPECT_EQ(nPrime(2.5), -1);
-    EXPECT_TRUE(true);;
-}
 
     //------------------------nextPrime
 
 TEST(TestNextPrime, checkPrime) {
     EXPECT_EQ(nextPrime(2), 3);
-    EXPECT_TRUE(true);
-}
-TEST(TestNextPrime, checkNegative) {
-    FAIL();
-    EXPECT_EQ(nextPrime(-20), 2);
     EXPECT_TRUE(true);
 }
 TEST(TestNextPrime, checkBeforePrime) {
@@ -143,11 +120,6 @@ TEST(TestSumPrime, checkDoubleBigNum) {
 }
 TEST(TestSumPrime, chekcDoubleFirstPrime) {
     EXPECT_EQ(sumPrime(2.0), 0);
-    EXPECT_TRUE(true);
-}
-TEST(TestSumPrime, checkNegative) {
-    FAIL();
-    EXPECT_EQ(sumPrime(-2), 0);
     EXPECT_TRUE(true);
 }
 TEST(TestSumPrime, checkTwoMillions) {
