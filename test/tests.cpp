@@ -60,7 +60,7 @@ TEST(NextPrimeTest, HandlesLargeNumbers) {
 TEST(NextPrimeTest, HandlesEdgeCases) {
   EXPECT_EQ(nextPrime(1), 2);   // Следующее после 1
   EXPECT_EQ(nextPrime(0), 2);   // Следующее после 0
-  EXPECT_EQ(nextPrime(2147483647), 2147483647); // Максимальное 32-битное простое число
+  EXPECT_EQ(nextPrime(2147483647), 2147483659); // Макс 32-битное простое число
 }
 
 // Тесты для функции sumPrime
