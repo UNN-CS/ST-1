@@ -1,12 +1,12 @@
 // Copyright 2025 UNN-CS
 #include <cstdint>
 #include "alg.h"
-
+#include <limits>
 
 bool checkPrime(uint64_t value) {
 	if (value < 2)
 		return false;
-	for (uint64_t i = 2;i < value;i++) {
+	for (uint64_t i = 2;i*i <= value;i++) {
 		if (value % i == 0)
 			return false;
 	}
@@ -14,22 +14,23 @@ bool checkPrime(uint64_t value) {
 }
 
 uint64_t nPrime(uint64_t n) {
-	count = 0;
-	for (uint64_t i = 2; i < n;i++) {
+	uint64_t count = 0;
+	for (uint64_t i = 2; i < std::numeric_limits<uint64_t>::max();i++) {
 		if (checkPrime(i))
-			count++
-		if (count == n) 
-			return i	
+			count++;
+		if (count == n)
+			return i;
 	}
 	return -1;
 }
 
 uint64_t nextPrime(uint64_t value) {
 	uint64_t i = value + 1;
-	while (i< std::numeric_limits<uint64_t>::max())
+	while (i < std::numeric_limits<uint64_t>::max()) {
 		if (checkPrime(i))
 			return i;
 		i++;
+	}
 	return -1;
 }
 
