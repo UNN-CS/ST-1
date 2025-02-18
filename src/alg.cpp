@@ -1,3 +1,5 @@
+// Copyright 2025 ovVrLFg8ks
+
 #include "alg.h"
 
 #include <cstdint>
@@ -13,7 +15,6 @@ bool checkPrime(uint64_t value) {
 
 uint64_t nPrime(uint64_t n) {
   if (n == 0) return 0;
-  uint64_t count = 0;
   uint64_t num = 2;
   for (uint64_t count = 0; count < n; num++)
     if (checkPrime(num)) count++;

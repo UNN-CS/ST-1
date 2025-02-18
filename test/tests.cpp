@@ -1,3 +1,5 @@
+// Copyright 2025 ovVrLFg8ks
+
 #include <gtest/gtest.h>
 
 #include <cstdint>
@@ -16,8 +18,8 @@ TEST(st1_nPrime, Number0) { EXPECT_EQ(nPrime(0), 0); }
 TEST(st1_nPrime, Number1) { EXPECT_EQ(nPrime(1), 2); }
 TEST(st1_nPrime, Number2) { EXPECT_EQ(nPrime(2), 3); }
 TEST(st1_nPrime, Number3) { EXPECT_EQ(nPrime(3), 5); }
-TEST(st1_nPrime, Number3) { EXPECT_EQ(nPrime(4), 7); }
-TEST(st1_nPrime, Number3) { EXPECT_EQ(nPrime(5), 11); }
+TEST(st1_nPrime, Number4) { EXPECT_EQ(nPrime(4), 7); }
+TEST(st1_nPrime, Number5) { EXPECT_EQ(nPrime(5), 11); }
 TEST(st1_nPrime, Number50) { EXPECT_EQ(nPrime(50), 229); }
 TEST(st1_nPrime, Number999) { EXPECT_EQ(nPrime(999), 7907); }
 TEST(st1_nPrime, Number1000) { EXPECT_EQ(nPrime(1000), 7919); }
@@ -40,5 +42,5 @@ TEST(st1_sumPrime, Number5) { EXPECT_EQ(sumPrime(5), 5); }
 TEST(st1_sumPrime, Number6) { EXPECT_EQ(sumPrime(6), 10); }
 TEST(st1_sumPrime, Number100) { EXPECT_EQ(sumPrime(100), 1060); }
 TEST(st1_sumPrime, Number999) { EXPECT_EQ(sumPrime(999), 76127); }
-TEST(st1_nextPrime, Number65537) { EXPECT_EQ(nextPrime(65537), 202288087); }
-TEST(st1_nextPrime, Number66049) { EXPECT_EQ(nextPrime(66049), 205773816); }
+TEST(st1_sumPrime, Number65537) { EXPECT_EQ(nextPrime(65537), 202288087); }
+TEST(st1_sumPrime, Number66049) { EXPECT_EQ(nextPrime(66049), 205773816); }
