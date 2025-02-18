@@ -87,5 +87,5 @@ TEST(SumPrimeTest, SumPrime5) {
 }
 
 TEST(SumPrimeTest, SumPrime6) {
-  EXPECT_EQ(sumPrime(2000000), 142913828922);  // Сумма простых чисел до 2 000 000
+  EXPECT_EQ(sumPrime(2000000), 142913828922);
 }
