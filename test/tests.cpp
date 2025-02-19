@@ -54,8 +54,8 @@ TEST(st1, sumPrime7) {
   EXPECT_EQ(res, expected);
 }
 
-TEST(st1, nPrime52) {
-  uint64_t res = nPrime(52);
+TEST(st1, nextPrime52) {
+  uint64_t res = nextPrime(52);
   uint64_t expected = 53;
   EXPECT_EQ(res, expected);
 }
