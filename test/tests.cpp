@@ -8,7 +8,7 @@ TEST(CheckPrimeTests, SmallNumbers) {
     EXPECT_TRUE(checkPrime(13));
 }
 TEST(CheckPrimeTests, LargeNumbers) {
-	EXPECT_TRUE(checkPrime(104729));
+    EXPECT_TRUE(checkPrime(104729));
 }
 TEST(NPrimeTests, SmallNPrimes) {
     EXPECT_EQ(nPrime(10), 29);
@@ -32,5 +32,5 @@ TEST(NPrimeTests, simpleNPrimes) {
     EXPECT_EQ(nPrime(2), 3);
 }
 TEST(SumPrimeTests, LimitLarge) {
-   EXPECT_EQ(sumPrime(2000000), 142913828922);
+    EXPECT_EQ(sumPrime(2000000), 142913828922);
 }
