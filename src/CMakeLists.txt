@@ -5,7 +5,7 @@ set(src ${${PROJECT_NAME}_SOURCE_DIR}/src/alg.cpp)
 
 message(PROJECT_SOURCE_DIR="${src}")
 
-add_library(${PROJECT_NAME} STATIC
+add_library(${PROJECT_NAME} SHARED
   ${header}
   ${src})
   
