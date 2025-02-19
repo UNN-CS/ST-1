@@ -15,7 +15,7 @@ TEST(st1, sumPrime3) {
   EXPECT_EQ(sumPrime(1000), 76127);
 }
 TEST(st1, sumPrime4) {
-  EXPECT_EQ(sumPrime(1500), 114914);
+  EXPECT_EQ(sumPrime(1500), 165040);
 }
 TEST(st1, sumPrime5) {
   EXPECT_EQ(sumPrime(10000), 5736396);
@@ -50,7 +50,7 @@ TEST(st1, NPrime4) {
   EXPECT_EQ(nPrime(1000), 7919);
 }
 TEST(st1, NPrime5) {
-  EXPECT_EQ(nPrime(1500), 12889);
+  EXPECT_EQ(nPrime(1500), 12553);
 }
 
 TEST(st1, nextPrime1) {
