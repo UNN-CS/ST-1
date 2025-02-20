@@ -1,3 +1,6 @@
+// Copyright 2025 UNN-CS
+// Copyright 2025 Oksana Shuravina
+
 #include <gtest/gtest.h>
 #include <cstdint>
 
