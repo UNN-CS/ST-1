@@ -1,7 +1,6 @@
 #include <cstdint>
 #include <cmath>
 
-// Проверка числа на простоту
 bool checkPrime(uint64_t value) {
     if (value < 2) return false;
     if (value == 2 || value == 3) return true;
@@ -14,7 +13,6 @@ bool checkPrime(uint64_t value) {
     return true;
 }
 
-// Нахождение n-го простого числа
 uint64_t nPrime(uint64_t n) {
     if (n == 0) return 0;
 
@@ -27,7 +25,6 @@ uint64_t nPrime(uint64_t n) {
     return num;
 }
 
-// Нахождение ближайшего следующего простого числа
 uint64_t nextPrime(uint64_t value) {
     if (value < 2) return 2;
 
@@ -38,7 +35,6 @@ uint64_t nextPrime(uint64_t value) {
     return value;
 }
 
-// Сумма всех простых чисел до hbound (не включая hbound)
 uint64_t sumPrime(uint64_t hbound) {
     uint64_t sum = 0;
     for (uint64_t i = 2; i < hbound; i++) {
