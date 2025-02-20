@@ -16,7 +16,7 @@ bool checkPrime(uint64_t value) {
   for (uint64_t i = 3; i * i <= value; i += 2) {
     if (value % i == 0) {
       return false;
-      }
+    }
   }
   return true;
 }
@@ -29,9 +29,9 @@ uint64_t nPrime(uint64_t n) {
   uint64_t num = 1;
   while (count < n) {
     num++;
-      if (checkPrime(num)) {
-        count++;
-      }
+    if (checkPrime(num)) {
+      count++;
+    }
   }
   return num;
 }
