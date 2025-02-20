@@ -1,3 +1,5 @@
+// Copyright 2025 Andrey Chernykh
+
 #include "alg.h"
 
 #include <cmath>
