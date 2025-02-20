@@ -1,13 +1,11 @@
 #include <gtest/gtest.h>
 #include <cstdint>
 
-// Подключаем функции из src/alg.cpp
 bool checkPrime(uint64_t value);
 uint64_t nPrime(uint64_t n);
 uint64_t nextPrime(uint64_t value);
 uint64_t sumPrime(uint64_t hbound);
 
-// Тесты для функции checkPrime
 TEST(CheckPrimeTest, SmallNumbers) {
     EXPECT_FALSE(checkPrime(0));
     EXPECT_FALSE(checkPrime(1));
@@ -36,7 +34,6 @@ TEST(CheckPrimeTest, LargePrimeNumbers) {
     EXPECT_TRUE(checkPrime(6700417));
 }
 
-// Тесты для функции nPrime
 TEST(NPrimeTest, FirstPrimes) {
     EXPECT_EQ(nPrime(1), 2);
     EXPECT_EQ(nPrime(2), 3);
@@ -65,7 +62,6 @@ TEST(NPrimeTest, EdgeCases) {
     EXPECT_EQ(nPrime(25), 97);
 }
 
-// Тесты для функции nextPrime
 TEST(NextPrimeTest, SmallNumbers) {
     EXPECT_EQ(nextPrime(0), 2);
     EXPECT_EQ(nextPrime(1), 2);
@@ -94,7 +90,6 @@ TEST(NextPrimeTest, EdgeCases) {
     EXPECT_EQ(nextPrime(199), 211);
 }
 
-// Тесты для функции sumPrime
 TEST(SumPrimeTest, SmallNumbers) {
     EXPECT_EQ(sumPrime(2), 0);
     EXPECT_EQ(sumPrime(3), 2);
