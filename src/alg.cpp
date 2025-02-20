@@ -1,10 +1,11 @@
 // Copyright 2025 UNN-CS
 #include <cstdint>
+#include <cmath>
 #include "alg.h"
 
 
 bool checkPrime(uint64_t value) {
-  for (int i = 2; i < static_cast<int>(value ** (1/2)) + 1; i++) {
+  for (int i = 2; i <  static_cast<uint64_t>(std::sqrt(value)) + 1; i++) {
     if (value % i == 0) {
       return false;
     }
