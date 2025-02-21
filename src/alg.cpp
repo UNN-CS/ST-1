@@ -28,7 +28,7 @@ uint64_t nPrime(uint64_t n) {
   uint64_t number = 2;
   uint64_t index = 1;
 
-  while(index <= n) {
+  while (index <= n) {
     if (checkPrime(number)) {
       if (index == n) {
         break;
