@@ -5,7 +5,7 @@
 #include "alg.h"
 
 bool checkPrime(uint64_t value) {
-  for (auto i = 2; i < static_cast<int>(std::sqrt(value)); ++i) {
+  for (auto i = 2; i < static_cast<int>(std::sqrt(value)) + 1; ++i) {
     if (value % i == 0) {
       return false;
     }
