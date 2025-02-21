@@ -2,9 +2,9 @@
 
 #include "alg.h"
 
-#include <cstdint>
-
 #include <gtest/gtest.h>
+
+#include <cstdint>
 
 TEST(st1, sumPrime1) {
     uint64_t res = sumPrime(2000000);
@@ -18,7 +18,7 @@ TEST(st1, sumPrime2) {
     EXPECT_EQ(expected, res);
   }
 
-TEST(checkPrimeTestJV, 0isFalse){
+TEST(checkPrimeTestJV, 0isFalse) {
     EXPECT_FALSE(checkPrime(0));
   }
 
@@ -30,7 +30,7 @@ TEST(checkPrimeTestJV, 2isTrue) {
     EXPECT_TRUE(checkPrime(2));
   }
 
-TEST(checkPrimeTestJV, primeIsTrue) {	
+TEST(checkPrimeTestJV, primeIsTrue) {
     EXPECT_TRUE(checkPrime(17));
     EXPECT_TRUE(checkPrime(47));
     EXPECT_TRUE(checkPrime(19));
