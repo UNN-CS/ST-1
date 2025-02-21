@@ -22,14 +22,12 @@ uint64_t nPrime(uint64_t n) {
 }
 
 uint64_t nextPrime(uint64_t value) {
-  auto nextPrimeNumber = 0;
   for (auto i = value + 1; i < static_cast<int>(value * value); ++i) {
     if (checkPrime(i)) {
-      nextPrimeNumber = i;
-      break;
+      return i;
     }
   }
-  return nextPrimeNumber;
+  return value;
 }
 
 uint64_t sumPrime(uint64_t hbound) {
