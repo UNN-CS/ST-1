@@ -41,7 +41,9 @@ TEST(st1, TestCompositeNumbers) {
 TEST(st1, TestNPrime) {
   EXPECT_EQ(nPrime(1), 2);
   EXPECT_EQ(nPrime(2), 3);
+  EXPECT_EQ(nPrime(3), 5);
   EXPECT_EQ(nPrime(10), 29);
+  EXPECT_EQ(nPrime(15), 47);
 }
 
 TEST(st1, TestNextPrime) {
