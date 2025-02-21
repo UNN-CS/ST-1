@@ -1,8 +1,9 @@
 // Copyright 2025 UNN-CS
 
-#include "alg.h"
 #include <cstdint>
 #include <gtest/gtest.h>
+
+#include "alg.h"
 
 Test(prime_num, isPrime1) { EXPECT_EQ(checkPrime(19), true); }
 

@@ -36,7 +36,7 @@ uint64_t sumPrime(uint64_t hbound) {
   auto sum = 2;
   auto prime = 2;
   auto counter = 1;
-  while (counter != static_cast<int>(nbound)) {
+  while (counter != static_cast<int>(hbound)) {
     prime = nextPrime(prime);
     sum += prime;
     counter++;
