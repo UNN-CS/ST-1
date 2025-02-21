@@ -5,8 +5,8 @@
 #include <cmath>
 #include <vector>
 
-std::vector<uint64_t> primes = {2, 3, 5}  ;
-uint64_t last_checked = 6;
+std::vector<uint64_t> primes = {2, 3, 5};
+  uint64_t last_checked = 6;
 
 void newPrimes(uint64_t n) {
     n++;
