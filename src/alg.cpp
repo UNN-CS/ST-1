@@ -1,6 +1,6 @@
 // Copyright 2025 UNN-CS
-#include <cstdint>
 #include "alg.h"
+#include <cstdint>
 #include <cmath>
 #include <vector>
 

@@ -6,13 +6,9 @@
 #include "alg.h"
 
 
-TEST(CheckPrimeTest, NotPrimeOne) {
-  EXPECT_FALSE(checkPrime(1));
-}
+TEST(CheckPrimeTest, NotPrimeOne) { EXPECT_FALSE(checkPrime(1)); }
 
-TEST(CheckPrimeTest, NotPrimeCarmichael) {
-  EXPECT_FALSE(checkPrime(561));
-}
+TEST(CheckPrimeTest, NotPrimeCarmichael) { EXPECT_FALSE(checkPrime(561)); }
 
 TEST(CheckPrimeTest, PrimeLargeNumbers) {
   std::vector<uint64_t> primes = {999983ULL, 1000003ULL, 1000033ULL, 104729ULL};
@@ -35,9 +31,7 @@ TEST(CheckPrimeTest, NotPrime_SmallNumbers) {
   }
 }
 
-TEST(NPrimeTest, ReturnsZeroForZero) {
-  EXPECT_EQ(0ULL, nPrime(0));
-}
+TEST(NPrimeTest, ReturnsZeroForZero) { EXPECT_EQ(0ULL, nPrime(0)); }
 
 TEST(NPrimeTest, FindsCorrectPrime) {
   std::vector<uint64_t> inputs = {20, 30, 40};
@@ -99,10 +93,11 @@ TEST(NextPrimeTest, FindsNextAfterPrimes) {
 }
 
 TEST(NextPrimeTest, PrimeGapIsValid) {
-  std::vector<uint64_t> primes = {3, 7, 11, 13, 17, 19, 23, 29, 31};
-  for (size_t i = 0; i < primes.size(); i++) {
-    uint64_t next = nextPrime(primes[i]);
-    EXPECT_TRUE(next - primes[i] == 2 || next - primes[i] == 4);
+  std::vector<uint64_t> inputs = {3, 7, 11, 13, 17, 19, 23, 29, 31};
+  for (auto prime : inputs) {
+    uint64_t nextP = nextPrime(prime);
+    EXPECT_GT(nextP, prime);
+    EXPECT_TRUE(checkPrime(nextP));
   }
 }
 
@@ -115,24 +110,25 @@ TEST(SumPrimeTest, ComputesCorrectSums) {
 }
 
 TEST(SumPrimeTest, HandlesSmallLimits) {
-  EXPECT_EQ(0ULL, sumPrime(0));  
-  EXPECT_EQ(0ULL, sumPrime(1));  
-  EXPECT_EQ(0ULL, sumPrime(2));  
-  EXPECT_EQ(2ULL, sumPrime(3));  
-  EXPECT_EQ(5ULL, sumPrime(5));  
+  EXPECT_EQ(0ULL, sumPrime(0));
+  EXPECT_EQ(0ULL, sumPrime(1));
+  EXPECT_EQ(0ULL, sumPrime(2));
+  EXPECT_EQ(2ULL, sumPrime(3));
+  EXPECT_EQ(5ULL, sumPrime(5));
 }
 
 TEST(SumPrimeTest, SumGrowsCorrectly) {
-  std::vector<uint64_t> inputs = {6, 8, 12, 18};
-  std::vector<uint64_t> expected = {10, 17, 28, 41};
+  std::vector<uint64_t> inputs = {6, 8, 12};
+  std::vector<uint64_t> expected = {10, 17, 28};
+
   for (size_t i = 0; i < inputs.size(); i++) {
     EXPECT_EQ(expected[i], sumPrime(inputs[i]));
   }
 }
 
 TEST(SumPrimeTest, ComputesLargeSums) {
-  EXPECT_EQ(76127ULL, sumPrime(1000)); 
-  EXPECT_EQ(1548136ULL, sumPrime(5000)); 
+  EXPECT_EQ(76127ULL, sumPrime(1000));
+  EXPECT_EQ(1548136ULL, sumPrime(5000));
 }
 
 TEST(SumPrimeTest, SumAlwaysIncreases) {
