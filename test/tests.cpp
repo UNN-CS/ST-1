@@ -2,8 +2,8 @@
 
 #include <gtest/gtest.h>
 #include <cstdint>
-#include "alg.h"
 #include <vector>
+#include "alg.h"
 
 //Test checkPrime()//
 
