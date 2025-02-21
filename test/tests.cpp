@@ -12,13 +12,13 @@ TEST(prime_num, isPrime2) { EXPECT_EQ(checkPrime(20), false); }
 TEST(prime_num, isPrime3) { EXPECT_EQ(checkPrime(113), true); }
 
 TEST(st1, nprime1) {
-  constexpr auto nprime = 11;
-  EXPECT_EQ(nPrime(nprime), 5);
+  constexpr auto nprime = 5;
+  EXPECT_EQ(nPrime(nprime), 11);
 }
 
 TEST(prime_num, nprime2) {
-  constexpr auto nprime = 17;
-  EXPECT_EQ(nPrime(17), 7);
+  constexpr auto nprime = 7;
+  EXPECT_EQ(nPrime(nprime), 17);
 }
 
 TEST(prime_num, nextPrime1) {
@@ -29,6 +29,11 @@ TEST(prime_num, nextPrime1) {
 TEST(prime_num, nextPrime2) {
   constexpr auto nextprime = 67;
   EXPECT_EQ(nextPrime(nextprime), 71);
+}
+
+TEST(prime_num, nextPrime3) {
+  constexpr auto nextprime = 673;
+  EXPECT_EQ(nextPrime(nextprime), 677);
 }
 
 TEST(prime_num, sumPrime1) {
