@@ -23,12 +23,12 @@ TEST(prime_num, nprime2) {
 
 TEST(prime_num, nextPrime1) {
   constexpr auto nextprime = 29;
-  EXPECT_EQ(nPrime(nextprime), 31);
+  EXPECT_EQ(nextPrime(nextprime), 31);
 }
 
 TEST(prime_num, nextPrime2) {
   constexpr auto nextprime = 67;
-  EXPECT_EQ(nPrime(nextprime), 71);
+  EXPECT_EQ(nextPrime(nextprime), 71);
 }
 
 TEST(prime_num, sumPrime1) {
