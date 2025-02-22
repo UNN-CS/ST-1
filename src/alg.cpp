@@ -3,6 +3,7 @@
 
 #include <cstdint>
 #include <cmath>
+#include "alg.h"
 
 
 bool checkPrime(uint64_t value) {
