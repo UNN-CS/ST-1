@@ -1,8 +1,8 @@
 // Copyright 2025 UNN-CS
 
-#include "alg.h"
-#include <cstdint>
 #include <gtest/gtest.h>
+#include <cstdint>
+#include "alg.h"
 
 TEST(st1, sumPrime1) {
   uint64_t res = sumPrime(2000000);
