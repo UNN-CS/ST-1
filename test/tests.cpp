@@ -66,3 +66,7 @@ TEST(NextPrimeTests, NextPrime2) {
     EXPECT_EQ(nextPrime(500), 503);
     EXPECT_EQ(nextPrime(1000), 1009);
 }
+
+TEST(NextPrimeTests, NextPrime3) {
+    EXPECT_EQ(nextPrime(2000), 2003);
+}
