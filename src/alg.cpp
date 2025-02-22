@@ -1,3 +1,6 @@
+// Copyright 2025 UNN-CS
+// Copyright 2025 Zinoviev Alexander
+
 #include "alg.h"
 #include <cmath>
 
