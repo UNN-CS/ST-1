@@ -3,7 +3,7 @@
 
 #include <gtest/gtest.h>
 #include <cstdint>
-
+#include "alg.h"
 
 TEST(SumPrimeTests, SumPrime1) {
     EXPECT_EQ(sumPrime(2), 0);
