@@ -41,7 +41,7 @@ TEST(PrimeTest, nextPrime_basic1) {
 }
 TEST(PrimeTest, nextPrime_basic2) {
   EXPECT_EQ(3, nextPrime(2));
-} 
+}
 TEST(PrimeTest, nextPrime_basic3) {
   EXPECT_EQ(5, nextPrime(3));
 }
