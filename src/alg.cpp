@@ -1,4 +1,4 @@
-// Copyright 2025 UNN-CS
+// Copyright 2025 shvedovav
 #include <cstdint>
 #include <cmath>
 #include <vector>
