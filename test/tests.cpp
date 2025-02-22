@@ -38,13 +38,13 @@ TEST(st1, checkPrime_basic7) {
 }
 TEST(PrimeTest, nextPrime_basic1) {
   EXPECT_EQ(2, nextPrime(1));
-} 
+}
 TEST(PrimeTest, nextPrime_basic2) {
   EXPECT_EQ(3, nextPrime(2));
-}  
+} 
 TEST(PrimeTest, nextPrime_basic3) {
   EXPECT_EQ(5, nextPrime(3));
-} 
+}
 TEST(PrimeTest, nextPrime_basic4) {
   EXPECT_EQ(5, nextPrime(4));
 }

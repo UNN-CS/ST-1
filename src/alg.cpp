@@ -29,14 +29,14 @@ uint64_t nPrime(uint64_t n) {
     num++;
   }
 
-    return num;
+  return num;
 }
 
 uint64_t nextPrime(uint64_t value) {
-    uint64_t num = value + 1;
+  uint64_t num = value + 1;
     while (true) {
         if (checkPrime(num)) {
-            return num;
+      return num;
     }
     num++;
   }
