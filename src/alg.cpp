@@ -1,6 +1,7 @@
 // Copyright 2025 UNN-CS
 #include <cstdint>
 #include <stdexcept>
+#include <cmath>
 #include "alg.h"
 
 
