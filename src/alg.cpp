@@ -1,7 +1,7 @@
 // Copyright 2025 UNN-CS
-#include <cstdint>
 #include "alg.h"
 #include "math.h"
+#include <cstdint>
 #include <vector>
 
 bool checkPrime(uint64_t value) {
@@ -39,7 +39,7 @@ uint64_t nPrime(uint64_t n) {
 }
 
 uint64_t nextPrime(uint64_t value) {
-  if (checkPrime(value)){
+  if (checkPrime(value)) {
     return value;
   }
   if (value <= 2) {
