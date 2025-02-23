@@ -1,6 +1,6 @@
 // Copyright 2025 UNN-CS
 #include "alg.h"
-#include "math.h"
+#include <math.h>
 #include <cstdint>
 #include <vector>
 
@@ -55,6 +55,9 @@ uint64_t nextPrime(uint64_t value) {
 uint64_t sumPrime(uint64_t hbound) {
   if (hbound < 2) {
     return 0;
+  }
+  if (hbound == 2) {
+    return 2;
   }
 
   std::vector<bool> vec(hbound, true);
