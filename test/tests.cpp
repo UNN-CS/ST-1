@@ -1,7 +1,7 @@
 // Copyright 2025 UNN-CS
 
-#include "alg.h"
 #include <gtest/gtest.h>
+#include "alg.h"
 
 TEST(CheckPrimeTest, HandlesZeroAndOne) {
   EXPECT_FALSE(checkPrime(0));
