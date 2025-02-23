@@ -32,7 +32,7 @@ TEST(st1, sumPrime2) {
 
 TEST(st1, sumPrime3) {
 	uint64_t res = sumPrime(120);
-	uint64_t expected = 36227;
+	uint64_t expected = 1593;
 	EXPECT_EQ(expected, res);
 }
 
