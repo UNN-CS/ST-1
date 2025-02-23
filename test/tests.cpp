@@ -1,8 +1,10 @@
 // Copyright 2025 UNN-CS
 
+#include "alg.h"
+
 #include <gtest/gtest.h>
 
-#include "alg.h"
+#include <iostream>
 
 TEST(st1, sumPrime1) {
   std::cout << "Running sumPrime1 test" << std::endl;
