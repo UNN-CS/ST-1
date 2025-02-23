@@ -2,6 +2,7 @@
 #include <cmath>
 #include <vector>
 #include <algorithm>
+#include <cstdint>
 
 bool checkPrime(uint64_t value) {
     if (value < 2) {
