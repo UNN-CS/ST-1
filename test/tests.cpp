@@ -39,8 +39,8 @@ TEST(st1, nPrime4) {
 TEST(st1, nPrime5) {
   EXPECT_EQ(nPrime(144), 827);
 }
-TEST(st1, nPrime5) {
-  EXPECT_EQ(nPrime(144), 827);
+TEST(st1, nPrime6) {
+  EXPECT_EQ(nPrime(5), 11);
 }
 
 TEST(st1, sumPrime1) {
