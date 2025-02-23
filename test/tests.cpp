@@ -21,7 +21,7 @@ TEST(st1, checkPrime5) {
   EXPECT_FALSE(checkPrime(308));
 }
 TEST(st1, checkPrime6) {
-  EXPECT_FALSE(checkPrime(0));
+  EXPECT_FALSE(checkPrime(4));
 }
 
 TEST(st1, nPrime1) {
@@ -56,10 +56,10 @@ TEST(st1, sumPrime4) {
   EXPECT_EQ(sumPrime(1000), 76127);
 }
 TEST(st1, sumPrime5) {
-  EXPECT_EQ(sumPrime(61), 411);
+  EXPECT_EQ(sumPrime(61), 440);
 }
 TEST(st1, sumPrime6) {
-  EXPECT_EQ(sumPrime(139), 1959);
+  EXPECT_EQ(sumPrime(139), 1988);
 }
 
 TEST(st1, nextPrime1) {
@@ -72,10 +72,10 @@ TEST(st1, nextPrime3) {
   EXPECT_EQ(nextPrime(971), 977);
 }
 TEST(st1, nextPrime4) {
-  EXPECT_EQ(nextPrime(174469), 175081);
+  EXPECT_EQ(nextPrime(174469), 174481);
 }
 TEST(st1, nextPrime5) {
-  EXPECT_EQ(nextPrime(1117), 1223);
+  EXPECT_EQ(nextPrime(1117), 1123);
 }
 TEST(st1, nextPrime6) {
   EXPECT_EQ(nextPrime(89), 97);
