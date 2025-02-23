@@ -66,3 +66,4 @@ TEST(st4, nextPrime2) {
     uint64_t expected = 41;
     EXPECT_EQ(expected, res);
 }
+
