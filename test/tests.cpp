@@ -2,9 +2,10 @@
 
 #include "alg.h"
 
+#include <iostream>
+
 #include <gtest/gtest.h>
 
-#include <iostream>
 
 TEST(st1, sumPrime1) {
   std::cout << "Running sumPrime1 test" << std::endl;
