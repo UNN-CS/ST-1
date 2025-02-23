@@ -1,10 +1,10 @@
 // Copyright 2025 UNN-CS
 
-#include "alg.h"
+#include <gtest/gtest.h>
 
 #include <iostream>
 
-#include <gtest/gtest.h>
+#include "alg.h"
 
 
 TEST(st1, sumPrime1) {
