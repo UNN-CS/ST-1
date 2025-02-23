@@ -13,7 +13,7 @@ bool checkPrime(uint64_t value) {
         if (value % i == 0) return false;
       }
     return true;
-} 
+\} 
 // Возвращает n-ое простое число
   uint64_t nPrime(uint64_t n) {
     if (n == 0) return 0;
@@ -41,4 +41,4 @@ bool checkPrime(uint64_t value) {
         }
       }
     return sum;
-} 
+}
