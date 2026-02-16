@@ -48,5 +48,5 @@ TEST(PrimeTest, SumPrimeTo3) {
 }
 
 TEST(PrimeTest, SumPrimeTo4) {
-    EXPECT_EQ(sumPrime(4), 2);
+    EXPECT_EQ(sumPrime(4), 5);
 }
