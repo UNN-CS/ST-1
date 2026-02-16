@@ -7,7 +7,6 @@ bool checkPrime(uint64_t value) {
   if (value < 2){
     return false;
   }
-
   if (value == 2){
     return true;
   }  
