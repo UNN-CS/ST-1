@@ -99,3 +99,8 @@ TEST(st1, sumPrime3) {
     uint64_t res = sumPrime(120);
     EXPECT_EQ(1593, res);
 }
+
+TEST(st1, sumPrime4) {
+    uint64_t res = sumPrime(2);
+    EXPECT_EQ(0, res);
+}
