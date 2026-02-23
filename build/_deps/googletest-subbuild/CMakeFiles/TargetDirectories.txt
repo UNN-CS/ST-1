@@ -1,0 +1,3 @@
+C:/Users/arssedot/ST2026/ST-1/build/_deps/googletest-subbuild/CMakeFiles/googletest-populate.dir
+C:/Users/arssedot/ST2026/ST-1/build/_deps/googletest-subbuild/CMakeFiles/ALL_BUILD.dir
+C:/Users/arssedot/ST2026/ST-1/build/_deps/googletest-subbuild/CMakeFiles/ZERO_CHECK.dir
