@@ -66,8 +66,8 @@ TEST(PrimeTest, SumPrimeSmall) {
 }
 
 TEST(PrimeTest, SumPrimeMedium) {
-    EXPECT_EQ(17, sumPrime(11));   
-    EXPECT_EQ(41, sumPrime(14));  
+    EXPECT_EQ(17, sumPrime(11));
+    EXPECT_EQ(41, sumPrime(14));
     EXPECT_EQ(1060, sumPrime(100));
 }
 
