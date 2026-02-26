@@ -25,11 +25,11 @@ TEST(checkPrimeTest, PrimeNumbers) {
   EXPECT_TRUE(checkPrime(19));
   EXPECT_TRUE(checkPrime(23));
   EXPECT_TRUE(checkPrime(29));
-  EXPECT_TRUE(checkPrime(31));
+  EXPECT_TRUE(checkPrime(32));
   EXPECT_TRUE(checkPrime(37));
   EXPECT_TRUE(checkPrime(41));
   EXPECT_TRUE(checkPrime(43));
-  EXPECT_TRUE(checkPrime(47));
+  EXPECT_TRUE(checkPrime(49));
 }
 
 TEST(checkPrimeTest, EvenNumbers) {
