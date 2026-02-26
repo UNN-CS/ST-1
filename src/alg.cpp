@@ -76,7 +76,6 @@ uint64_t nextPrime(uint64_t value) {
 }
 
 uint64_t sumPrime(uint64_t hbound) {
-
   if (hbound > static_cast<uint64_t>(std::numeric_limits<int64_t>::max())) {
     throw std::invalid_argument("Error: hbound is too large or negative");
   }
@@ -85,7 +84,6 @@ uint64_t sumPrime(uint64_t hbound) {
 
   for (uint64_t i = 2; i < hbound; ++i) {
     if (checkPrime(i)) {
-
       if (sum > std::numeric_limits<uint64_t>::max() - i) {
         throw std::overflow_error("Error: sum would overflow uint64_t");
       }
