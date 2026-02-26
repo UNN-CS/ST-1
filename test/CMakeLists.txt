@@ -30,3 +30,6 @@ target_link_libraries(${PROJECT_NAME}.test
 # target_compile_definitions(${PROJECT_NAME}.test 
 #   PRIVATE TEST_DIR="${CMAKE_CURRENT_LIST_DIR}/test")
 
+enable_testing()
+
+add_test(NAME ST1Tests COMMAND ${PROJECT_NAME}.test)
