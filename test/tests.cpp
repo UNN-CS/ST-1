@@ -25,9 +25,9 @@ TEST(PrimeTest, CheckPrimeEvenAndOdd) {
 }
 
 TEST(PrimeTest, CheckPrimeLargerNumbers) {
-  EXPECT_TRUE(checkPrime(104729));       
-  EXPECT_FALSE(checkPrime(104730));      
-  EXPECT_TRUE(checkPrime(2147483647ULL)); 
+  EXPECT_TRUE(checkPrime(104729));
+  EXPECT_FALSE(checkPrime(104730));
+  EXPECT_TRUE(checkPrime(2147483647ULL));
 }
 
 // -------- nPrime --------
