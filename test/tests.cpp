@@ -30,7 +30,7 @@ TEST(CheckPrime, SmallCompositesAreNotPrime) {
 }
 
 TEST(CheckPrime, PerfectSquareIsNotPrime) {
-  EXPECT_FALSE(checkPrime(49)); 
+  EXPECT_FALSE(checkPrime(49));
   EXPECT_FALSE(checkPrime(121));
 }
 
