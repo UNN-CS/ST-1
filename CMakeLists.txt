@@ -9,3 +9,4 @@ enable_testing()
 
 add_subdirectory(src)
 add_subdirectory(test)
+add_test(NAME ST1_unit COMMAND ${PROJECT_NAME}.test)
