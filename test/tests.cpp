@@ -46,7 +46,7 @@ TEST(st1, nPrime_10th) {
 
 TEST(st1, nextPrime_examples) {
   EXPECT_EQ(nextPrime(4), 5ULL);
-  EXPECT_EQ(nextPrime(11), 13ULL); 
+  EXPECT_EQ(nextPrime(11), 13ULL);
 }
 
 TEST(st1, nextPrime_edge) {
@@ -59,8 +59,8 @@ TEST(st1, sumPrime_small) {
   EXPECT_EQ(sumPrime(0), 0ULL);
   EXPECT_EQ(sumPrime(1), 0ULL);
   EXPECT_EQ(sumPrime(2), 0ULL);
-  EXPECT_EQ(sumPrime(3), 2ULL); 
-  EXPECT_EQ(sumPrime(10), 17ULL); 
+  EXPECT_EQ(sumPrime(3), 2ULL);
+  EXPECT_EQ(sumPrime(10), 17ULL);
 }
 
 TEST(st1, sumPrime1) {
