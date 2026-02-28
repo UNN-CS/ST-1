@@ -38,7 +38,7 @@ uint64_t nextPrime(uint64_t value) {
   while (!checkPrime(candidate)) {
     candidate += 2;
   }
-  
+
   return candidate;
 }
 
