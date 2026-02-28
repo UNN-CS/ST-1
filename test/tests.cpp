@@ -1,9 +1,7 @@
 // Copyright 2025 UNN-CS
-
 #include <gtest/gtest.h>
 #include <cstdint>
 #include "alg.h"
-#include <gtest/gtest.h>
 
 TEST(checkPrimeTest, SmallNumbers) {
   EXPECT_FALSE(checkPrime(0));
@@ -25,11 +23,11 @@ TEST(checkPrimeTest, PrimeNumbers) {
   EXPECT_TRUE(checkPrime(19));
   EXPECT_TRUE(checkPrime(23));
   EXPECT_TRUE(checkPrime(29));
-  EXPECT_TRUE(checkPrime(32));
+  EXPECT_TRUE(checkPrime(31));
   EXPECT_TRUE(checkPrime(37));
   EXPECT_TRUE(checkPrime(41));
   EXPECT_TRUE(checkPrime(43));
-  EXPECT_TRUE(checkPrime(49));
+  EXPECT_TRUE(checkPrime(47));
 }
 
 TEST(checkPrimeTest, EvenNumbers) {
@@ -71,7 +69,6 @@ TEST(nPrimeTest, LargeN) {
   EXPECT_EQ(nPrime(500), 3571);
 }
 
-TEST(st1, sumPrime1) {
 TEST(nextPrimeTest, BasicNextPrimes) {
   EXPECT_EQ(nextPrime(2), 3);
   EXPECT_EQ(nextPrime(3), 5);
@@ -123,10 +120,5 @@ TEST(sumPrimeTest, KnownSums) {
 TEST(sumPrimeTest, LargeSum) {
   uint64_t res = sumPrime(2000000);
   uint64_t expected = 142913828922;
-  EXPECT_EQ(expected, res);
-}
-TEST(st1, sumPrime2) {
-  uint64_t res = sumPrime(10);
-  uint64_t expected = 17;
   EXPECT_EQ(expected, res);
 }
