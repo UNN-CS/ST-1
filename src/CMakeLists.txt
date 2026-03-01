@@ -8,6 +8,8 @@ message(PROJECT_SOURCE_DIR="${src}")
 add_library(${PROJECT_NAME} SHARED
   ${header}
   ${src})
+
+set_target_properties(${PROJECT_NAME} PROPERTIES WINDOWS_EXPORT_ALL_SYMBOLS ON)
   
 add_executable(${PROJECT_NAME}.info main.cpp)
 target_link_libraries(${PROJECT_NAME}.info ${PROJECT_NAME})
