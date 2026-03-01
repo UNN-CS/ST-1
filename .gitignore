@@ -1,0 +1,21 @@
+# Сборка
+build/
+bin/
+lib/
+out/
+# Visual Studio
+.vs/
+*.user
+*.sln
+*.vcxproj
+*.filters
+*.suo
+*.db
+*.opendb
+
+# Временные файлы
+*.obj
+*.exe
+*.pdb
+*.ilk
+*.log
