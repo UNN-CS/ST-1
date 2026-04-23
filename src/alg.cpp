@@ -1,4 +1,5 @@
 // Copyright 2025 UNN-CS
+
 #include <cstdint>
 #include <limits>
 #include "alg.h"

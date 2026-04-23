@@ -1,7 +1,7 @@
 // Copyright 2025 UNN-CS
 
-#include <cstdint>
 #include <gtest/gtest.h>
+#include <cstdint>
 
 #include "alg.h"
 
