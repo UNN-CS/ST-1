@@ -1,9 +1,9 @@
-cmake_minimum_required (VERSION 3.16)
-project (ST-1)
+cmake_minimum_required(VERSION 3.16)
+
+project(ST-1)
 
 set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -O3 -g")
-
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 enable_testing()
 

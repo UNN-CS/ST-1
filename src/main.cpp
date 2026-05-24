@@ -1,4 +1,5 @@
-// Copyright 2025 UNN-CS
+// Copyright 2026 Salykina Alena
+
 #include "alg.h"
 
 int main() {

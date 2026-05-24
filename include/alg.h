@@ -1,4 +1,5 @@
-// Copyright 2025 UNN-CS
+// Copyright 2026 Salykina Alena
+
 #ifndef INCLUDE_ALG_H_
 #define INCLUDE_ALG_H_
 #include <cstdint>
