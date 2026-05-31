@@ -1,13 +1,13 @@
-#include <cstdint>
-
+// Copyright 2026 Klimov M.D.
 #include "alg.h"
+#include <cstdint>
 
 // 1. Проверка числа на простоту
 bool checkPrime(uint64_t value) {
     if (value <= 1) return false;
     if (value <= 3) return true;
     if (value % 2 == 0 || value % 3 == 0) return false;
-    
+
     // Проверяем делители до корня из числа, шаг 6
     for (uint64_t i = 5; i * i <= value; i += 6) {
         if (value % i == 0 || value % (i + 2) == 0)
@@ -18,7 +18,7 @@ bool checkPrime(uint64_t value) {
 
 // 2. Поиск n-го простого числа
 uint64_t nPrime(uint64_t n) {
-    if (n == 0) return 0; 
+    if (n == 0) return 0;
     uint64_t count = 0;
     uint64_t num = 1;
     while (count < n) {
