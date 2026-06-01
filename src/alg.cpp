@@ -1,3 +1,5 @@
+// Copyright 2025 UNN-CS
+
 #include "alg.h"
 
 bool checkPrime(uint64_t value) {
