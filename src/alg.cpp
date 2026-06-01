@@ -1,3 +1,5 @@
+// Copyright 2025 UNN-CS
+
 #include <cstdint>
 
 bool checkPrime(uint64_t value) {
