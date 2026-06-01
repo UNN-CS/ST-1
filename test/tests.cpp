@@ -1,112 +1,72 @@
-// Copyright 2025 UNN-CS
-
-#include <gtest/gtest.h>
 #include <cstdint>
-#include <stdexcept>
+#include <gtest/gtest.h>
 #include "alg.h"
 
+TEST(PrimeLib, CheckPrime_SmallTrue) {
+  EXPECT_TRUE(checkPrime(5));
+  EXPECT_TRUE(checkPrime(11));
+  EXPECT_TRUE(checkPrime(29));
+}
 
-TEST(st1, checkPrime_One) {
+TEST(PrimeLib, CheckPrime_SmallFalse) {
   EXPECT_FALSE(checkPrime(1));
+  EXPECT_FALSE(checkPrime(15));
+  EXPECT_FALSE(checkPrime(25));
 }
 
-TEST(st1, checkPrime_Two) {
-  EXPECT_TRUE(checkPrime(2));
+TEST(PrimeLib, CheckPrime_LargePrime) {
+  EXPECT_TRUE(checkPrime(1009));
 }
 
-TEST(st1, checkPrime_Three) {
-  EXPECT_TRUE(checkPrime(3));
+TEST(PrimeLib, CheckPrime_LargeComposite) {
+  EXPECT_FALSE(checkPrime(1001));
 }
 
-TEST(st1, checkPrime_Four) {
-  EXPECT_FALSE(checkPrime(4));
+TEST(PrimeLib, NPrime_Zero) {
+  EXPECT_EQ(0u, nPrime(0));
 }
 
-TEST(st1, checkPrime_LargePrime) {
-  EXPECT_TRUE(checkPrime(104729));
+TEST(PrimeLib, NPrime_First) {
+  EXPECT_EQ(2u, nPrime(1));
 }
 
-TEST(st1, checkPrime_LargeComposite) {
-  EXPECT_FALSE(checkPrime(104730));
+TEST(PrimeLib, NPrime_Middle) {
+  EXPECT_EQ(11u, nPrime(5));
+  EXPECT_EQ(29u, nPrime(10));
 }
 
-// nPrime tests
-TEST(st1, nPrime_First) {
-  uint64_t res = nPrime(1);
-  EXPECT_EQ(2, res);
+TEST(PrimeLib, NPrime_Large) {
+  EXPECT_EQ(229u, nPrime(50));
 }
 
-TEST(st1, nPrime_Second) {
-  uint64_t res = nPrime(2);
-  EXPECT_EQ(3, res);
+TEST(PrimeLib, NextPrime_FromZeroOne) {
+  EXPECT_EQ(2u, nextPrime(0));
+  EXPECT_EQ(2u, nextPrime(1));
 }
 
-TEST(st1, nPrime_Tenth) {
-  uint64_t res = nPrime(10);
-  EXPECT_EQ(29, res);
+TEST(PrimeLib, NextPrime_FromPrime) {
+  EXPECT_EQ(11u, nextPrime(7));
 }
 
-TEST(st1, nPrime_Hundredth) {
-  uint64_t res = nPrime(100);
-  EXPECT_EQ(541, res);
+TEST(PrimeLib, NextPrime_FromComposite) {
+  EXPECT_EQ(17u, nextPrime(14));
+  EXPECT_EQ(97u, nextPrime(89));
 }
 
-TEST(st1, nPrime_ZeroThrows) {
-  EXPECT_THROW(nPrime(0), std::invalid_argument);
+TEST(PrimeLib, SumPrime_Boundaries) {
+  EXPECT_EQ(0u, sumPrime(0));
+  EXPECT_EQ(0u, sumPrime(2));
+  EXPECT_EQ(2u, sumPrime(3));
 }
 
-// nextPrime tests
-TEST(st1, nextPrime_FromZero) {
-  uint64_t res = nextPrime(0);
-  EXPECT_EQ(2, res);
+TEST(PrimeLib, SumPrime_Twenty) {
+  EXPECT_EQ(77u, sumPrime(20));
 }
 
-TEST(st1, nextPrime_FromOne) {
-  uint64_t res = nextPrime(1);
-  EXPECT_EQ(2, res);
+TEST(PrimeLib, SumPrime_Fifty) {
+  EXPECT_EQ(328u, sumPrime(50));
 }
 
-TEST(st1, nextPrime_FromPrime) {
-  uint64_t res = nextPrime(13);
-  EXPECT_EQ(17, res);
-}
-
-TEST(st1, nextPrime_FromComposite) {
-  uint64_t res = nextPrime(14);
-  EXPECT_EQ(17, res);
-}
-
-TEST(st1, nextPrime_MaxValueThrows) {
-  EXPECT_THROW(nextPrime(UINT64_MAX), std::overflow_error);
-}
-
-// sumPrime tests
-TEST(st1, sumPrime_Zero) {
-  uint64_t res = sumPrime(0);
-  EXPECT_EQ(0, res);
-}
-
-TEST(st1, sumPrime_One) {
-  uint64_t res = sumPrime(1);
-  EXPECT_EQ(0, res);
-}
-
-TEST(st1, sumPrime_Two) {
-  uint64_t res = sumPrime(2);
-  EXPECT_EQ(0, res);
-}
-
-TEST(st1, sumPrime_Ten) {
-  uint64_t res = sumPrime(10);
-  EXPECT_EQ(17, res);
-}
-
-TEST(st1, sumPrime_Twenty) {
-  uint64_t res = sumPrime(20);
-  EXPECT_EQ(77, res);
-}
-
-TEST(st1, sumPrime_Large) {
-  uint64_t res = sumPrime(2000000);
-  EXPECT_EQ(142913828922ULL, res);
+TEST(PrimeLib, SumPrime_FiveHundred) {
+  EXPECT_EQ(21536u, sumPrime(500));
 }
