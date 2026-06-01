@@ -4,7 +4,6 @@
 #include <cstdint>
 #include <vector>
 
-
 bool checkPrime(uint64_t value) {
   if (value < 2) {
     return false;
@@ -13,9 +12,8 @@ bool checkPrime(uint64_t value) {
     return true;
   }
   if (value % 2 == 0) {
-    return false;  
+    return false;
   }
-
   for (uint64_t i = 3; i * i <= value; i += 2) {
     if (value % i == 0) {
       return false;
@@ -23,7 +21,6 @@ bool checkPrime(uint64_t value) {
   }
   return true;
 }
-
 
 uint64_t nPrime(uint64_t n) {
   if (n == 0) {
@@ -33,7 +30,7 @@ uint64_t nPrime(uint64_t n) {
     return 2;
   }
 
-  uint64_t count = 1; 
+  uint64_t count = 1;
   uint64_t candidate = 3;
 
   while (count < n) {
@@ -43,25 +40,20 @@ uint64_t nPrime(uint64_t n) {
     if (count == n) {
       return candidate;
     }
-    candidate += 2; 
+    candidate += 2;
   }
   return candidate;
 }
 
-
 uint64_t nextPrime(uint64_t value) {
   if (value == UINT64_MAX) {
-    return 0;  
+    return 0;
   }
   if (value < 2) {
     return 2;
   }
 
   uint64_t candidate = value + 1;
-  if (candidate == 2) {
-    return 2;
-  }
-
   if (candidate % 2 == 0) {
     candidate++;
   }
@@ -77,11 +69,9 @@ uint64_t sumPrime(uint64_t hbound) {
     return 0;
   }
 
-
   std::vector<bool> sieve(hbound, true);
   sieve[0] = false;
   sieve[1] = false;
-
 
   for (uint64_t p = 2; p * p < hbound; ++p) {
     if (sieve[p]) {
@@ -90,7 +80,6 @@ uint64_t sumPrime(uint64_t hbound) {
       }
     }
   }
-
 
   uint64_t total_sum = 0;
   for (uint64_t i = 2; i < hbound; ++i) {
