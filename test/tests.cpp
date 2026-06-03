@@ -4,18 +4,17 @@
 #include <cstdint>
 #include "alg.h"
 
-
 TEST(st1, sumPrime1) {
   uint64_t res = sumPrime(2000000);
   uint64_t expected = 142913828922;
   EXPECT_EQ(expected, res);
 }
+
 TEST(st1, sumPrime2) {
   uint64_t res = sumPrime(10);
   uint64_t expected = 17;
   EXPECT_EQ(expected, res);
 }
-
 
 TEST(CheckPrimeTest, SmallPrimes) {
   EXPECT_TRUE(checkPrime(29));
@@ -39,7 +38,6 @@ TEST(CheckPrimeTest, Composites) {
   EXPECT_FALSE(checkPrime(40));
 }
 
-
 TEST(NPrimeTest, EdgeCases) {
   EXPECT_EQ(nPrime(0), 0);
   EXPECT_EQ(nPrime(1), 2);
@@ -57,7 +55,6 @@ TEST(NPrimeTest, LargerN) {
   EXPECT_EQ(nPrime(30), 113);
 }
 
-
 TEST(NextPrimeTest, SmallValues) {
   EXPECT_EQ(nextPrime(2), 3);
   EXPECT_EQ(nextPrime(4), 5);
@@ -65,11 +62,15 @@ TEST(NextPrimeTest, SmallValues) {
   EXPECT_EQ(nextPrime(11), 13);
 }
 
+TEST(NextPrimeTest, BoundaryCases) {
+  EXPECT_EQ(nextPrime(0), 2);
+  EXPECT_EQ(nextPrime(1), 2);
+}
+
 TEST(NextPrimeTest, LargeGaps) {
   EXPECT_EQ(nextPrime(113), 127);
   EXPECT_EQ(nextPrime(114), 127);
 }
-
 
 TEST(SumPrimeTest, EdgeCases) {
   EXPECT_EQ(sumPrime(2), 0);
