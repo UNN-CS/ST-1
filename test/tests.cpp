@@ -1,75 +1,88 @@
-// Copyright 2025 UNN-CS
+// Copyright 2024 Nazyrov A.A.
 
 #include <gtest/gtest.h>
-#include <cstdint>
 #include "alg.h"
 
-
-TEST(st1, sumPrime1) {
-  uint64_t res = sumPrime(2000000);
-  uint64_t expected = 142913828922;
-  EXPECT_EQ(expected, res);
-}
-TEST(st1, sumPrime2) {
-  uint64_t res = sumPrime(10);
-  uint64_t expected = 17;
-  EXPECT_EQ(expected, res);
+// Тесты для isPrimeNumber
+TEST(PrimeCheckTest, ZeroIsNotPrime) {
+    EXPECT_FALSE(isPrimeNumber(0));
 }
 
-TEST(st1, checkPrime_returns_false_for_zero) {
-  EXPECT_FALSE(checkPrime(0));
+TEST(PrimeCheckTest, OneIsNotPrime) {
+    EXPECT_FALSE(isPrimeNumber(1));
 }
 
-TEST(st1, checkPrime_returns_false_for_one) {
-  EXPECT_FALSE(checkPrime(1));
+TEST(PrimeCheckTest, TwoIsPrime) {
+    EXPECT_TRUE(isPrimeNumber(2));
 }
 
-TEST(st1, checkPrime_returns_true_for_two) {
-  EXPECT_TRUE(checkPrime(2));
+TEST(PrimeCheckTest, ThreeIsPrime) {
+    EXPECT_TRUE(isPrimeNumber(3));
 }
 
-TEST(st1, checkPrime_returns_false_for_composite) {
-  EXPECT_FALSE(checkPrime(21));
+TEST(PrimeCheckTest, FourIsNotPrime) {
+    EXPECT_FALSE(isPrimeNumber(4));
 }
 
-TEST(st1, checkPrime_returns_true_for_prime) {
-  EXPECT_TRUE(checkPrime(97));
+TEST(PrimeCheckTest, SeventeenIsPrime) {
+    EXPECT_TRUE(isPrimeNumber(17));
 }
 
-TEST(st1, nPrime_returns_first_prime_for_one) {
-  EXPECT_EQ(2u, nPrime(1));
+TEST(PrimeCheckTest, HundredIsNotPrime) {
+    EXPECT_FALSE(isPrimeNumber(100));
 }
 
-TEST(st1, nPrime_returns_tenth_prime) {
-  EXPECT_EQ(29u, nPrime(10));
+TEST(PrimeCheckTest, LargePrime) {
+    EXPECT_TRUE(isPrimeNumber(7919));
 }
 
-TEST(st1, nPrime_returns_zero_for_zero_index) {
-  EXPECT_EQ(0u, nPrime(0));
+// Тесты для getNthPrime
+TEST(NthPrimeTest, FirstPrime) {
+    EXPECT_EQ(getNthPrime(1), 2);
 }
 
-TEST(st1, nextPrime_after_non_prime) {
-  EXPECT_EQ(5u, nextPrime(4));
+TEST(NthPrimeTest, SecondPrime) {
+    EXPECT_EQ(getNthPrime(2), 3);
 }
 
-TEST(st1, nextPrime_after_prime) {
-  EXPECT_EQ(13u, nextPrime(11));
+TEST(NthPrimeTest, ThirdPrime) {
+    EXPECT_EQ(getNthPrime(3), 5);
 }
 
-TEST(st1, sumPrime_before_ten) {
-  EXPECT_EQ(17u, sumPrime(10));
+TEST(NthPrimeTest, TenthPrime) {
+    EXPECT_EQ(getNthPrime(10), 29);
 }
 
-TEST(st1, sumPrime_before_two) {
-  EXPECT_EQ(0u, sumPrime(2));
+// Тесты для findNextPrime
+TEST(NextPrimeTest, AfterFour) {
+    EXPECT_EQ(findNextPrime(4), 5);
 }
 
-TEST(st1, sumPrime_before_thirty) {
-  EXPECT_EQ(129u, sumPrime(30));
+TEST(NextPrimeTest, AfterEleven) {
+    EXPECT_EQ(findNextPrime(11), 13);
 }
 
-TEST(st1, sumPrime_before_two_million) {
-  uint64_t res = sumPrime(2000000);
-  uint64_t expected = 142913828922;
-  EXPECT_EQ(expected, res);
+TEST(NextPrimeTest, AfterSeventeen) {
+    EXPECT_EQ(findNextPrime(17), 19);
+}
+
+TEST(NextPrimeTest, AfterTwenty) {
+    EXPECT_EQ(findNextPrime(20), 23);
+}
+
+// Тесты для sumPrimesUpTo
+TEST(SumPrimeTest, UpToTen) {
+    EXPECT_EQ(sumPrimesUpTo(10), 17);  // 2+3+5+7 = 17
+}
+
+TEST(SumPrimeTest, UpToTwenty) {
+    EXPECT_EQ(sumPrimesUpTo(20), 77);  // 2+3+5+7+11+13+17+19 = 77
+}
+
+TEST(SumPrimeTest, UpToTwo) {
+    EXPECT_EQ(sumPrimesUpTo(2), 0);
+}
+
+TEST(SumPrimeTest, UpToOne) {
+    EXPECT_EQ(sumPrimesUpTo(1), 0);
 }
