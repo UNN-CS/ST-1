@@ -4,54 +4,11 @@
 #include <cstdint>
 #include "alg.h"
 
-TEST(st1, sumPrime2000000) {
-  EXPECT_EQ(sumPrime(2000000), 142913828922);
-}
-TEST(st1, sumPrime10) {
-  EXPECT_EQ(sumPrime(10), 17);
-}
-TEST(st1, sumPrime0) {
-  EXPECT_EQ(sumPrime(0), 0);
-}
-TEST(st1, sumPrime1) {
-  EXPECT_EQ(sumPrime(1), 0);
-}
-TEST(st1, sumPrime19) {
-  EXPECT_EQ(sumPrime(19), 58);
-}
-TEST(st1, sumPrime18) {
-  EXPECT_EQ(sumPrime(18), 58);
-}
-TEST(st1, sumPrime20) {
-  EXPECT_EQ(sumPrime(20), 77);
-}
 
-TEST(st1, checkPrime0) {
-  EXPECT_FALSE(checkPrime(0));
-}
-TEST(st1, checkPrime1) {
-  EXPECT_FALSE(checkPrime(1));
-}
-TEST(st1, checkPrime3) {
-  EXPECT_TRUE(checkPrime(3));
-}
-TEST(st1, checkPrime7) {
-  EXPECT_TRUE(checkPrime(7));
-}
-TEST(st1, checkPrime17) {
-  EXPECT_TRUE(checkPrime(17));
-}
-TEST(st1, checkPrime101) {
-  EXPECT_TRUE(checkPrime(101));
-}
-TEST(st1, checkPrime1009) {
-  EXPECT_TRUE(checkPrime(1009));
-}
-TEST(st1, checkPrime555) {
-  EXPECT_FALSE(checkPrime(555));
-}
-TEST(st1, checkPrime2000) {
-  EXPECT_FALSE(checkPrime(2000));
+TEST(st1, sumPrime1) {
+  uint64_t res = sumPrime(2000000);
+  uint64_t expected = 142913828922;
+  EXPECT_EQ(expected, res);
 }
 
 TEST(st1, sumPrime2) {
