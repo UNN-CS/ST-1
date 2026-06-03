@@ -1,4 +1,4 @@
-// Copyright 2020 GHA Test Team
+// Copyright 2025 UNN-CS
 
 #include <gtest/gtest.h>
 
