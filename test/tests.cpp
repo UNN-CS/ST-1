@@ -1,7 +1,7 @@
 // Copyright 2025 UNN-CS
 
-#include "alg.h"
 #include <gtest/gtest.h>
+#include "alg.h"
 
 TEST(SumPrimeTest, Basic) {
   EXPECT_EQ(sumPrime(2), 0);
