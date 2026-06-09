@@ -8,7 +8,7 @@ bool divisibleBy(uint64_t number, uint64_t divisor) {
   return number % divisor == 0;
 }
 
-}  
+}  // namespace
 
 bool checkPrime(uint64_t value) {
   if (value < 2) {
